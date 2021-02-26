@@ -1,4 +1,4 @@
-import { trimString } from "../../other/trim-string";
+import { trimString } from "../other/trim-string";
 
 interface IInput extends React.HTMLProps<HTMLInputElement> {
   label: string;
