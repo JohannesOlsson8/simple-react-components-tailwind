@@ -1,6 +1,7 @@
 # Button
 
-A Icon button (One icon, no text).
+A button(with or without icon.
+If you don't want any text, please use IconButton instead.
 
 ## Props
 
