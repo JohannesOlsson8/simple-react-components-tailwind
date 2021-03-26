@@ -1,4 +1,4 @@
-# Button
+# Collapse
 
 A collapsable section.
 
@@ -6,7 +6,7 @@ A collapsable section.
 
 | Props    | Type      | Required | Default | Description                                  |
 | :------- | :-------- | :------- | :------ | :------------------------------------------- |
-| Label    | 'string   | Yes      |         |                                              |
+| label    | 'string'  | Yes      |         |                                              |
 | children | ReactNode | No       |         | Hidden content until the section is pressed. |
 
 ## Dependency
