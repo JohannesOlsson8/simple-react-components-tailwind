@@ -1,0 +1,15 @@
+.checkbox ~ .checked {
+  display: none;
+}
+
+.checkbox:checked ~ .unchecked {
+  display: none;
+}
+
+.checkbox:checked ~ .checked {
+  display: block;
+}
+
+.checkbox ~ .unchecked {
+  display: block;
+}

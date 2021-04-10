@@ -1,6 +1,6 @@
-import { trimString } from "../other/trim-string";
+import { trimString } from "../../other/trim-string";
 
-interface IInput extends React.HTMLProps<HTMLInputElement> {
+interface IInputField extends React.HTMLProps<HTMLInputElement> {
   label: string;
   hideLabel?: boolean;
   helperText?: string;
@@ -13,7 +13,7 @@ interface IValidation {
   message?: string;
 }
 
-export const Input = (props: IInput) => {
+export const InputField = (props: IInputField) => {
   const {
     label,
     helperText,

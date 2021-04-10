@@ -1,0 +1,21 @@
+.radio {
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.radio ~ .checked {
+  display: none;
+}
+
+.radio:checked ~ .unchecked {
+  display: none;
+}
+
+.radio:checked ~ .checked {
+  display: block;
+}
+
+.radio ~ .unchecked {
+  display: block;
+}

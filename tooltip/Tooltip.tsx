@@ -1,5 +1,5 @@
-import { Tooltip as ReachTooltip } from '@reach/tooltip';
-import './Tooltip.scss';
+import { Tooltip as ReachTooltip } from "@reach/tooltip";
+import "./Tooltip.scss";
 
 interface ITooltip {
   label: string;
