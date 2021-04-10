@@ -1,0 +1,10 @@
+.root {
+  animation: rotate 1.5s linear infinite;
+  position: absolute;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

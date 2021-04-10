@@ -1,36 +1,6 @@
-import { IBaseButton } from "../atoms/base/BaseButton";
-import { ContainedButton } from "../atoms/variants/ContainedButton";
-import { GhostButton } from "../atoms/variants/GhostButton";
-import { OutlinedButton } from "../atoms/variants/OutlinedButton";
+import React from "react";
+import { IVariant, Variant } from "../atoms/Variant";
 
-interface IButton extends IBaseButton {
-  variant?: "contained" | "outlined" | "ghost";
-  icon?: React.ReactNode;
-  children: React.ReactNode;
-}
-
-export const Button: React.FC<IButton> = (props) => {
-  const { variant, icon, children, ...rest } = props;
-
-  if (variant === "outlined") {
-    return (
-      <OutlinedButton icon={icon} {...rest}>
-        {props.children}
-      </OutlinedButton>
-    );
-  }
-
-  if (variant === "ghost") {
-    return (
-      <GhostButton icon={icon} {...rest}>
-        {props.children}
-      </GhostButton>
-    );
-  }
-
-  return (
-    <ContainedButton icon={icon} {...rest}>
-      {props.children}
-    </ContainedButton>
-  );
+export const Button: React.FC<IVariant> = (props) => {
+  return <Variant {...props} />;
 };
