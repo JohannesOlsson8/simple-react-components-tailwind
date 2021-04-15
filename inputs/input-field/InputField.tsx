@@ -1,5 +1,3 @@
-import { trimString } from "../../other/trim-string";
-
 interface IInputField extends React.HTMLProps<HTMLInputElement> {
   label: string;
   hideLabel?: boolean;
@@ -30,23 +28,21 @@ export const InputField = (props: IInputField) => {
   }
 
   return (
-    <div className="flex flex-col items-start w-full sm:w-auto">
-      {!hideLabel && (
-        <label className="mb-1" htmlFor={labelWithoutSpaces}>
-          {label}
-        </label>
-      )}
+    <label className="flex flex-col items-start w-full sm:w-auto">
+      <span className={`mb-1 ${props.hideLabel ? "sr-only" : ""} `}>
+        {label}
+      </span>
       <input
-        id={labelWithoutSpaces}
-        className={`w-full sm:w-80 h-12 border p-2 placeholder-gray-600 rounded-sm outline-none focus:border-fuchsia-600 focus:ring-1 focus:ring-fuchsia-600 ring-inset ${getErrorState()} ${className}`}
-        aria-label={hideLabel ? label : undefined}
+        className={`w-full sm:w-80 h-12 border p-2 placeholder-gray-600 rounded-sm outline-none focus:border-fuchsia-600 focus:ring-1 focus:ring-fuchsia-600 ring-inset ${getErrorState()} ${
+          className ? className : ""
+        }`}
         type={!type ? "text" : type}
         placeholder={hideLabel ? label : undefined}
         {...rest}
       />
 
       {(validation || helperText) && (
-        <div className="w-full sm:w-80 mt-1">
+        <div className="w-full sm:w-80 mt-1.5">
           {validation && validation.message && (
             <p className="text-red-800 font-light">{validation.message}</p>
           )}
@@ -55,6 +51,6 @@ export const InputField = (props: IInputField) => {
           )}
         </div>
       )}
-    </div>
+    </label>
   );
 };
