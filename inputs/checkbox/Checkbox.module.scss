@@ -1,3 +1,8 @@
+.checkbox:focus ~ svg {
+  @apply fill-current;
+  @apply text-fuchsia-600;
+}
+
 .checkbox ~ .checked {
   display: none;
 }

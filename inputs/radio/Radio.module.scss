@@ -1,4 +1,10 @@
 .radio {
+  &:focus {
+    ~ svg {
+      @apply fill-current;
+      @apply text-fuchsia-600;
+    }
+  }
   &:disabled {
     opacity: 0.5;
   }
