@@ -1,0 +1,15 @@
+@import '../../../styles/animations.scss';
+
+.root {
+  background: repeating-linear-gradient(
+    theme('colors.gray.200'),
+    theme('colors.gray.200') 40px,
+    theme('colors.gray.300'),
+    theme('colors.gray.300') 41px,
+    #fff 41px,
+    #fff 80px,
+    theme('colors.gray.300'),
+    theme('colors.gray.300') 81px
+  );
+  @include animations;
+}

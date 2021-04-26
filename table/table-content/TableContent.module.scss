@@ -1,0 +1,11 @@
+.tableHead {
+  th {
+    @apply py-3;
+  }
+}
+
+.striped {
+  tr:nth-child(odd) {
+    @apply bg-gray-100;
+  }
+}
