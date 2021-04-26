@@ -1,0 +1,13 @@
+.root {
+  @apply flex;
+  @apply mb-6;
+  > * {
+    @apply mr-4;
+    &:only-child {
+      width: 100%;
+    }
+    &:last-child {
+      @apply mr-0;
+    }
+  }
+}
